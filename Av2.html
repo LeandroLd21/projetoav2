@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+div{
+    display:block;
+}
+.logo {
+    width: 35%;
+    text-align: center;
+    background-image: url("Img/Logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 500px 725px;
+    border-radius: 5%;
+}
+.car {
+    width: 64%;
+    text-align: left;
+    background-color: rgb(211, 231, 248);
+    background-repeat: no-repeat;
+    background-size: 1000px 755px;
+    border-radius: 5%;
+}
+.verde{
+    background: rgb(157, 254, 157);
+    cursor:pointer;
+}
+.verde:hover{
+    background: rgb(0, 249, 0);
+    cursor:pointer;
+}
+.azul{
+    background: rgb(155, 157, 254);
+}
+.azul:hover{
+    background: rgb(0, 8, 249);
+    cursor:pointer;
+}
+.azul:active{
+    background-color: #ccc;
+}
+.vermelho{
+    background-color: rgb(255, 159, 159);
+}
+.vermelho:hover{
+    background: rgb(249, 0, 0);
+    cursor:pointer;
+}
+.modal{
+    background-color:rgb(0, 0, 0,.5);
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+}
+.modal-content{
+    margin: 0 auto;
+    margin-top: 5%;
+    max-width: 800px;
+    background-color: #eee;
+    padding: 0px;
+    box-shadow: 0 0 2px #fff;
+    text-align: center;
+
+}
+.modal-header,.modal-body,.modal-footer{
+    padding: 10px;
+}
+.modal-header{
+    background-color: #eee;
+}
+.modal-footer{
+    background-color: rgb(255, 252, 252);
+}
+
+.modal-footer2{
+    background-color: #eee;
+}
+</style>
+</head>
+<body>
+    <div class="logo">
+        <br>
+        <h1 class="cor_padrao" style="font-size:50px;margin-top: 225px">TODO LIST</h1>
+            <input type="text" name="Your Name" id="Your Name" placeholder="Digite aqui" style="font-size:30px;">
+            <br>
+            <button class="verde" style="font-size:30px;margin-top:25px;margin-bottom: 285px;">Salvar</button>
+    </div>
+    <div style="margin-left: 525px;margin-top:-725px" class="car">
+        <h5 class="cor_padrao" style="font-size:57px;margin-top:1px;margin-left: 20px;">Tarefas</h6> 
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 121<button onclick="openModal('dv-modal')" class="azul" style="font-size:25px;margin-left: 505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 122<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 123<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 124<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 125<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 126<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 127<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <h4 style="font-size:25px;margin-left: 25px">Tarefa 128<button onclick="openModal('dv-modal')" class="azul"style="font-size:25px;margin-left:  505px;">EDITAR</button><button onclick="openModal('dv2-modal')"class="vermelho" style="font-size:25px;margin-left: 25px;">DELETAR</button></h4>
+            <br style="margin-bottom: 285px;">
+    </div>
+
+    <div id="dv-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+
+            <div class="modal-body">
+                <h1 class="cor_padrao" style="font-size:50px;margin-top: 75px">TODO LIST</h1>
+                <input type="text" name="Your Name" id="Your Name" placeholder="Digite aqui" style="font-size:30px;">
+                <br>
+                <button class="verde" style="font-size:30px;margin-top:25px;margin-bottom: 75px;">Atualizar</button>
+            </div>
+
+            <div class="modal-footer">
+            <button class="vermelho" onclick="closeModal('dv-modal')">Fechar</button>
+            </div>
+        </div>
+    </div>
+    <div id="dv2-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+
+            <div class="modal-body">
+                <h1 class="cor_padrao" style="font-size:50px;margin-top: 75px">TODO LIST</h1>
+                <input type="text" name="Your Name" id="Your Name" placeholder="Digite aqui" style="font-size:30px;">
+                <br>
+                <h1>Tem certeza de que deseja excluir esse arquivo?</h1>
+                <button class="vermelho" style="font-size:30px;margin-top:50px;margin-bottom: 75px;margin-right:300px;">Sim</button>
+            </div>
+
+            <div style="margin-left: 300px;margin-top:-128px" class="modal-footer2">
+                <button class="vermelho" style="font-size:30px;margin-bottom: 150px;" onclick="closeModal('dv2-modal')">Não</button>
+            </div>
+        </div>
+    </div>
+    <script src="modal.js"></script>
+</body>
+</html>
